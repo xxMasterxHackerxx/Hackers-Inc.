@@ -12,3 +12,9 @@ int main()
 	return 0;
 }
 
+void Welcome(const string& Scrambled)
+{
+	cout << "Welcome to the word unscrambling game.\n";
+	cout << "The scrambled word is " << Scrambled << "\n\n";
+}
+
