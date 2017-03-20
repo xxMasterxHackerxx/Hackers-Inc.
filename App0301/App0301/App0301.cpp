@@ -11,4 +11,17 @@ int main()
 	system("pause");
 	return 0;
 }
+string mixUp(const string& aWord)
+{
+	string jumble = aWord;
+	size_t length = jumble.size();
 
+	for (size_t i = 0; i < length; i++)
+	{
+		size_t randomIndex = rand() % length;
+		char work = jumble[i];
+		jumble[i] = jumble[randomIndex];
+		jumble[randomIndex] = work;
+	}
+	return jumble;
+}
