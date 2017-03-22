@@ -37,7 +37,7 @@ string randomWord()
 {
 	const int NUM_WORDS = 5;
 	const string SECRET_WORDS[NUM_WORDS] = {
-		"edgelord", "cpu", "hack", "dank", "thelegend"
+		"edgelord", "innocuous", "hack", "dank", "thelegend"
 	};
 	srand(time(NULL));
 	int ran = rand() % NUM_WORDS;
