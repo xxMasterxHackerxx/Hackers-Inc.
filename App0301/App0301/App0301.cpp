@@ -58,7 +58,7 @@ void Play(const string& aWord){
 		cin >> guess;
 
 		if ((guess != aWord) && (guess != "quit")){
-			cout << " Your are Very Very Wrong!!" << endl;
+			cout << "Your are Very Very Wrong!!" << endl;
 		}
 
 
