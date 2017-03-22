@@ -2,7 +2,14 @@
 //
 
 #include <iostream>
+#include <string>
+#include <time.h>
 using namespace std;
+
+void Welcome(const string& Scrambled);
+string GenerateWord();
+string Scramble(const string& SecretWord);
+void Play(const string& Scrambled);
 
 
 int main()
