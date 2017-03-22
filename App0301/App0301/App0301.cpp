@@ -1,13 +1,10 @@
-	// App0301.cpp : Defines the entry point for the console application.
-	//
-
 #include <iostream>
 #include <string>
 #include <time.h>
 using namespace std;
 
 void Welcome(const string& Scrambled);
-string GenerateWord();
+string randomWord();
 string Scramble(const string& SecretWord);
 void Play(const string& Scrambled);
 
@@ -15,14 +12,14 @@ void Play(const string& Scrambled);
 int main()
 {
 	string someRandomWord = randomWord();
-	string jumble = mixUp(someRandomWord);
+	string jumble = Scramble(someRandomWord);
 	Welcome(jumble);
 	Play(someRandomWord);
 
 	system("pause");
 	return 0;
 }
-string mixUp(const string& aWord)
+string Scramble(const string& aWord)
 {
 	string jumble = aWord;
 	size_t length = jumble.size();
@@ -53,4 +50,23 @@ void Welcome(const string& Scrambled)
 	cout << "Welcome to the word unscrambling game.\n";
 	cout << "The scrambled word is " << Scrambled << "\n\n";
 }
+void Play(const string& aWord){
+	string guess, secretWord;
+	do{
 
+		cout << "Enter your guess: ";
+		cin >> guess;
+
+		if ((guess != aWord) && (guess != "quit")){
+			cout << " Your are Very Very Wrong!!" << endl;
+		}
+
+
+	} while ((guess != aWord) && (guess != "quit"));
+	if (guess == aWord){
+		cout << "You are Correct!!!!!, Thanks for playing" << endl;
+	}
+	if (guess == "quit"){
+		cout << "Thanks for playing" << endl;
+	}
+}
